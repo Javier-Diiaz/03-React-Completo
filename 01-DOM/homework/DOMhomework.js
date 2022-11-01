@@ -1,13 +1,13 @@
 // Crear un array vacío llamado 'toDoItems'
 // Tu codigo acá:
-var prueba = []
+let toDoItems = []
+
 
 // En la página 'index.html' hay un elemento span cuyo texto es 'Aplicación creada por:'.
 // Usando querySelector seleccionar dicho span por su id ('createdBy') y luego usando innerHTML
 // agregar tu nombre al final del texto actual. Ej: 'Aplicación creada por Franco'
 // Tu código acá:
-
-
+document.getElementById('createdBy').innerHTML = 'Aplicación creada por: Javier Santiago Diaz Arcila'
 
 // Crear una clase denominada 'ToDo' cuyo constructor debe recibir un único parámetro del tipo string
 // con el nombre 'description' que será justamente la descripción del ToDo.
@@ -16,9 +16,10 @@ var prueba = []
 // 2) 'complete'    : debe setearse en false
 // Ayuda: usar 'this' en el constructor
 
-function ToDo() {
+function ToDo(description) {
   // Tu código acá:
-
+  this.description = description
+  this.complete = false
 }
 
 
@@ -27,7 +28,9 @@ function ToDo() {
 // Debe setear el atributo 'complete' del ToDo en true
 
 // Tu código acá:
-
+ToDo.prototype.completeToDo = function () {
+  this.complete = true
+}
 
 
 // Agregar dos parámetros a la función 'buildToDo':
@@ -50,7 +53,29 @@ function ToDo() {
 
 function buildToDo(todo, index) {
   // Tu código acá:
-
+  //1
+  let toDoShell = document.createElement('div');
+  //2
+  toDoShell.className = 'toDoShell'
+  //3
+  let toDoText = document.createElement('span')
+  //4
+  toDoText.innerHTML = todo.description
+  //5
+  toDoText.id = index
+  //6
+  if (todo.complete === true) {
+    toDoText.className = 'completeText'
+  }
+  //! 6 alternativo
+  //! todo.complete && (toDoText.className = 'completeText')
+  //7
+  toDoShell.appendChild(toDoText)
+  //3) En la función 'buildToDo' agregar un 'click' event listener al elemento 'toDoText', pasándole
+  //esta función como callback
+  toDoText.addEventListener('click', completeToDo)
+  //8  
+  return toDoShell
 }
 
 // La función 'buildToDos' debe crear un array de objetos toDo y devolverlo
@@ -60,9 +85,8 @@ function buildToDo(todo, index) {
 
 function buildToDos(toDos) {
   // Tu código acá:
-
+  return toDos.map(buildToDo)//result = [{},{},{},{}]
 }
-
 
 // La función 'displayToDos' se va a encargar de que se vean los toDo's en pantalla
 //  1) Seleccionr el elemento cuyo id es 'toDoContainer' y almacenarlo en una variable denominada 'toDoContainer'
@@ -75,7 +99,18 @@ function buildToDos(toDos) {
 
 function displayToDos() {
   // Tu código acá:
-
+  //1
+  let toDoContainer = document.getElementById('toDoContainer')
+  //2
+  toDoContainer.innerHTML = ''
+  //3
+  let result = buildToDos(toDoItems)
+  //4
+  for (let i = 0; i < result.length; i++) {
+    toDoContainer.appendChild(result[i])
+  }
+  //5 Todo listo :) 
+  //6 listo 
 }
 
 
@@ -90,7 +125,16 @@ function displayToDos() {
 
 function addToDo() {
   // Tu código acá:
-
+  //extra 
+  let Myinput = document.querySelector('#toDoInput')
+  //1
+  let nuevo = new ToDo(Myinput.value)
+  //2
+  toDoItems.push(nuevo)
+  //3
+  toDoInput.innerHTML = ''
+  //4
+  displayToDos()
 }
 
 // Agregar un 'Event Listener' para que cada vez que el botón 'AGREGAR' sea clickeado
@@ -99,6 +143,10 @@ function addToDo() {
 //   2) Agregarle un 'click' event listener, pasándole la función 'addToDo' como callback
 
 // Tu código acá:
+//1
+let llamo = document.getElementById('addButton')
+llamo.addEventListener('click', addToDo)
+
 
 
 // La función completeToDo se va a ejecutar cuando queramos completar un todo
@@ -115,9 +163,13 @@ function addToDo() {
 
 function completeToDo(event) {
   // DESCOMENTAR LA SIGUIENTE LINEA
-  // const index = event.target.id;
+  const index = event.target.id;
   // Tu código acá:
-
+  //1
+  toDoItems[index].completeToDo()
+  //2
+  displayToDos()
+  //3 todo listo
 }
 
 // Una vez que llegaste a este punto verificá que todos los tests pasen
@@ -137,6 +189,7 @@ function completeToDo(event) {
 
 
 // Acá debes insertar la llamada a 'displayToDos'
+displayToDos()
 
 
 // ---------------------------- NO CAMBIES NADA DE ACÁ PARA ABAJO ----------------------------- //
