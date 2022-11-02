@@ -3,13 +3,18 @@
 .home {
 
   .intro {
+    img {
+      // border-radius: 20px;
+      // margin-top: 8px;
+      .img-mix(2em, 0.5em)
+    }
 
     h2 {
       padding: 15px;
     }
 
     p {
-      padding:0 15px;
+      padding: 0 15px;
     }
 
   }
@@ -58,6 +63,10 @@
       }
 
       .btn {
+        font-size: 20px;
+        // padding: 10px 15px;
+        // background-color: @btn-bg-color;
+        .btn-mix(@btn-bg-color, @wild-sand)
       }
     }
 
@@ -71,5 +80,45 @@
         border-radius: 10px;
       }
     }
+  }
+}
+
+@media @phone {
+  .home {
+    .intro img {
+      width: calc(100vw - 18px);
+      margin: 0.2em 0.7em;
+    }
+
+    .music-images .auricular {
+      width: calc(100vw - 18px);
+    }
+
+    .actual {
+      flex-direction: column-reverse;
+      padding: 50px 0px 50px 15px;
+
+      .actual-text {
+        width: 100%;
+
+        .btn {
+          width: calc(100vw - 25px);
+          padding: 1.2em;
+          text-align: center;
+          font-size: 1.7em;
+        }
+      }
+
+      .actual-img {
+        width: calc(100vw - 25px);
+        margin-left: 0;
+        margin-bottom: 0.7em;
+      }
+    }
+  }
+
+  .tecnologia,
+  .ondas {
+    display: none;
   }
 }
