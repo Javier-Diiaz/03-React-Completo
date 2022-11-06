@@ -17,12 +17,12 @@
 
 //! HTTP --> protocolo de trasferencia de informacion 
 // nos permite comunicarnos entre fronted y backend en el envio y recivido de informacion  
-//? HTTP Methods
+//TODO: HTTP Methods
 //conjunto de metodos de peticion que indican una accion que se decide realizar para un recurso especificado
-// metodo GET ---> SOLICITA INFORMACION de un recurso especifico 
-// metodo PUT ---> edita la informacion y la envia a una ruta especifica(actualiza la informacion)
-// metodo DELETE --->  elimina un dato un registro etc
-//metodo POST ---> envia / agrega datos a una ruta especifica/ recordar que no se pueden agregar datos a la ruta de otor metodo como por ejemplo el delete 
+//? metodo GET ---> SOLICITA INFORMACION de un recurso especifico 
+//* metodo PUT ---> edita la informacion y la envia a una ruta especifica(actualiza la informacion)
+//? metodo DELETE --->  elimina un dato un registro etc
+//* metodo POST ---> envia / agrega datos a una ruta especifica/ recordar que no se pueden agregar datos a la ruta de otor metodo como por ejemplo el delete 
 
 //!Eventos
 // los eventos estan directamente relacionados con el frontend y el backend ya que mediante ellos logramas mandar y recibir la informacion a los servidores y a mi propio pc 
