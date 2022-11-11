@@ -1,0 +1,2 @@
+(this["webpackJsonp06-react-intro"]=this["webpackJsonp06-react-intro"]||[]).push([[0],{10:function(t,n,e){"use strict";e.r(n);e(1);var c=e(3),r=e.n(c),i=(e(8),e(0));function o(){}function s(){return Object(i.jsx)("div",{children:Object(i.jsx)(o,{})})}r.a.render(Object(i.jsx)(s,{}),document.getElementById("root"))},8:function(t,n,e){}},[[10,1,2]]]);
+//# sourceMappingURL=main.4771b10c.chunk.js.map
