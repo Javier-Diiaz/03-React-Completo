@@ -7,12 +7,11 @@ const alerts = { m1: "Aprobado", m2: "En curso" };
 
 export default function Bienvenido() {
   // el código de tu componente acá
-  let lista = techSkills.map(Element => <li>{Element}</li>)
   return (
     <div>
       <h1>Primera pagina con componentes de React</h1>
       <h3>{studentName}</h3>
-      <ul>{lista}</ul>
+      <ul>{techSkills.map((Element) => <li key={Element.toString()}>{Element}</li>)}</ul>
       <Botones alerts={alerts}></Botones>
     </div>
   )
