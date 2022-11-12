@@ -13,7 +13,7 @@ export default function Bienvenido() {
       <h1>Primera pagina con componentes de React</h1>
       <h3>{studentName}</h3>
       <ul>{lista}</ul>
-      <Botones />
+      <Botones alerts={alerts} />
     </div>
   )
 }
