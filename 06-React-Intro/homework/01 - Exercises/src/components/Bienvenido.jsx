@@ -7,7 +7,6 @@ const alerts = { m1: "Aprobado", m2: "En curso" };
 
 export default function Bienvenido() {
   // el código de tu componente acá
-  var prueba = []
   return (
     <div>
       <h1>Primera pagina con componentes de React</h1>
