@@ -30,24 +30,30 @@ const element = <h1>Hello, world!</h1>;
 // esta transformacion despues de que el codigo ya esta editado y listo para enviarse el el proceso se usa BABEL para transormar la forma nueva en la antigua y asi que todo siga funcionando correctamente.
 
 //? Componentes funcionales y componentes de clase 
-//Funcionales
+
+//!Funcionales
 function Welcome(props) {
     return <h1>Hello, {props.name}</h1>;
 }
 
-// Componente de Clase
+
+
+
+
+//! Componente de Clase
 class Welcome extends React.Component {
     render() {
         return <h1>Hello, {this.props.name}</h1>;
     }
 }
 
-//? PROPS en componentes de clase 
+
+
+
+//TODO: PROPS en componentes de clase 
 class Welcome extends React.Component {
     render() {
         return <h1>Hello, {this.props.name}</h1>;//con el this se llama a las propiedades de este forma antigua
     }
 }
-function Welcome(props) {
-    return <h1>Hello, {props.name}</h1>;
-}
+
