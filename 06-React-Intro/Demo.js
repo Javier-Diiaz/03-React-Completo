@@ -56,5 +56,3 @@ class Welcome extends React.Component {
         return <h1>Hello, {this.props.name}</h1>;//con el this se llama a las propiedades de este forma antigua
     }
 }
-
-//prueba
