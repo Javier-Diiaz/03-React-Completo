@@ -1,6 +1,7 @@
 // (function () {
 
-window.EventEmitter = EventEmitter;
+//export asi windows en este caso 
+// window.EventEmitter = EventEmitter;
 
 // our EventEmitter constructor function
 function EventEmitter() {
@@ -43,4 +44,5 @@ EventEmitter.prototype.emit = function (eventName) {
 
 };
 
+module.exports = EventEmitter;
 // }) ();
