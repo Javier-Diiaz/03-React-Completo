@@ -1,11 +1,10 @@
 import React from 'react';
 
-
 const DivButtons = 'DivButtons'
 const Buttons = 'Buttons'
 
 export default class Botones extends React.Component {
-  render () {
+  render() {
     const { alerts } = this.props
     return (
       <div>
