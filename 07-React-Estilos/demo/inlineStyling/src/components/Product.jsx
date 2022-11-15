@@ -3,6 +3,7 @@ import React from 'react';
 const divStyle = {
   margin: '40px',
   border: '5px solid pink',
+  textAlign: 'center'
 };
 const pStyle = {
   fontSize: '15px',
