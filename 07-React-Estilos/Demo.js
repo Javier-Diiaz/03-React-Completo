@@ -3,16 +3,20 @@
 //! React css
 // Al web pack de react hay que agregarle una nueva configuracion para que lea css
 
-//! css Legacy(no recomendable se pisan)
-// ya no usar class en el atributo de una etiqueta  en React por problemas de palabras recervadas en ves de eso se usa className=''
-// con ccs legacy que es el modo que simpre usamos con anterioridad, con web pack en react cuando se renderiza si se tiene id o clases con el mismo nombre se van a pisar
+//! cssStylesheet (legacy)
+//  se pisan los estilos porque es en cascada el modo que siempre e conocido, ademas hay que configurar web pack para que coja todo lo terminado en .css y lo lea como estilos
 
-//! inline styling (css-in-js)(cuando crece la app se vuelve algo complicado de seguir)
-//(colocando los stylos en la propia etiqueta html pero llamando las props css como un objeto)
+//! inlineStyling
+// no se necesita configurar web pack, se usan objetos de js para dar estilos a las etiquetas, pero para hacer hover(pasar el mouse encima de algo y que cambie de color) no me va a funcionar porque se "finge" css pero no es css, es enrealidad obj de js
 
-//! Css Modules(Recomensable)
-// cuando compila web pack les cambia el nombre a los nombres de los id y asi no se pisan
-// ademas al ser modularizado todo va a ser mas claro y se cumple la responsabilidad unica de React
+//! cssModules ====> Recomendado
+// solo cambia el modo de importar la hoja de estilos de resto es como legacy(todo lo bueno en uno)
+// y para tener estilos globales me toca configurar el web pack como esta en los ejemplos
+
+//! styledComponent
+// nueva forma creada por react que combina todo lo anterior
+// la ida es juntar  todo pero mediante componentes
+// para poder que funcione toca instarlo mediante el comando npm i styled-components
 
 
 

@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <Producto title="Prueba" price={400}/>
+      <Producto title="Prueba" price={400} />
     </>
   )
 }
