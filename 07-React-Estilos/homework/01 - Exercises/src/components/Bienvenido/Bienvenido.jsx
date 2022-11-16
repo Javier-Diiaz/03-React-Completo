@@ -11,10 +11,15 @@ const studentName = 'Javier Santiago Diaz Arcila'
 const techSkills = [{ tech: 'Html', image: htmlImg }, { tech: 'Css', image: cssImg }, { tech: 'JavaScript', image: javascriptImg }, { tech: 'React', image: reactImg }, { tech: 'Redux', image: redux }]
 const alerts = { m1: 'Aprobado', m2: 'En curso' }
 
+
+
 export default function Bienvenido() {
+  const cambio = {
+    color: 'red',
+  }
   return (
     <div className={styles.divBienvenido} >
-      <h1 className={styles.title}>Soy Henry</h1>
+      <h1 className={styles.title} style={cambio}>Soy Henry</h1>
       <h3 className={styles.subtitle}>{studentName}</h3>
       <ul className={styles.unorderedList}>
         {techSkills.map(skill => (
