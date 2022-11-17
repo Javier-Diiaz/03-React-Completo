@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8"/>
+  <meta charset="utf-8" />
   <title>Henry - Demo State</title>
 </head>
+
 <body>
   <div id='app'></div>
 
@@ -20,7 +22,7 @@
         };
       }
 
-      render(){
+      render() {
         return (
           <div>
             <h2>{this.state.title}</h2>
@@ -29,33 +31,34 @@
       }
     };
 
-  class App extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        title: 'Henry'
-      };
-      this.onButtonClick = this.onButtonClick.bind(this);
-    }
+    class App extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          title: 'Henry'
+        };
+        this.onButtonClick = this.onButtonClick.bind(this);
+      }
 
-    onButtonClick() {
-      this.setState({
-        title: this.state.title === "Henry" ? "Franco" : "Henry"
-      });
-    }
+      onButtonClick() {
+        this.setState({
+          title: this.state.title === "Henry" ? "Franco" : "Henry"
+        });
+      }
 
-    render(){
-      return (
-        <div>
-          <h1>DEMO - Father title: {this.state.title}</h1>
-          <Children title={this.state.title} />
-          <button onClick={this.onButtonClick}>Click me!</button>
-        </div>
-      )
-    }
-  };
+      render() {
+        return (
+          <div>
+            <h1>DEMO - Título del padre: {this.state.title}</h1>
+            <Children title={this.state.title} />
+            <button onClick={this.onButtonClick}>Haz click en mi!</button>
+          </div>
+        )
+      }
+    };
 
-  ReactDOM.render(<App />, document.getElementById('app'));
+    ReactDOM.render(<App />, document.getElementById('app'));
   </script>
 </body>
+
 </html>
