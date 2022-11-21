@@ -1,6 +1,10 @@
 {
   "zoo": {
-    "species": ["Mamíferos", "Reptiles", "Aves"],
+    "species": [
+      "Mamíferos",
+      "Reptiles",
+      "Aves"
+    ],
     "animals": [
       {
         "name": "León",
@@ -10,7 +14,7 @@
       {
         "name": "Delfín",
         "specie": "Mamíferos",
-        "image": "https://www.bioenciclopedia.com/wp-content/uploads/2012/04/delfin-comun-800.jpg"
+        "image": "https://estaticos.muyinteresante.es/media/cache/1140x_thumb/uploads/images/gallery/5d9208eb5cafe81a0f3c986a/delfin12.jpg"
       },
       {
         "name": "Cocodrilo",
