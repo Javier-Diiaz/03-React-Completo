@@ -4,15 +4,18 @@ export default function Cards(char) {
    const { characters } = char;
    return (
       <div>
-         {characters.map((char) => {
-            <Card>
-               <button onClick={char.onClose}>X</button>
-               <h2>{char.name}</h2>
-               <h2>{char.species}</h2>
-               <h2>{char.gender}</h2>
-               <img src={char.image} alt="" />
-            </Card>
+         {characters.map((character) => {
+            return (<Card
+               key={character.name}
+               name={character.name}
+               species={character.species}
+               gender={character.gender}
+               image={character.image}
+               onClose={() => window.alert('Emulamos que se cierra la card')}
+            />
+            )
          })}
+
       </div>
    )
 }
