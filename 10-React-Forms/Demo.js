@@ -27,6 +27,17 @@
 // es mas predecible porque en el input le damos las condiciones que se necesitan para que pasa de hay
 // ejempli si un input tiene mayusculas le retorna que no se puede asi  que corrija
 
-// prueba
+
+//! Conceptos Basicos E importantes
+// prop de un input placeholder= 'lo que aparece en el input del usuario,en ese campo ese rectangulo que tiene el input'
+// prop del input name que es en si el nombre del input
+// prop del input keys es muy importante porque con esta React sabe el orden y valor unico de cada componente
+// nuevo etiqueta o componentes llamado <form>       </from>
+// con la propiedad onClose de in input capturo su value
+
+//! para buscar un validador
+// hay que googlearlo y colocarle el .test(valueaevaluar)
 
 
+//todo: 1 Demo  ==> Ejemplo.jsx    Es solo para observar que react mira las key de los input no importa que se rendericen en diferente orden
+//todo  2       ==> ejemplo Uncontrolled.jsx  es solo para mirar como son los formularios viejos y que llamar directamente al dom para tener la info que necesitan
