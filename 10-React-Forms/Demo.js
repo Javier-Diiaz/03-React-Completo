@@ -41,3 +41,12 @@
 
 //todo: 1 Demo  ==> Ejemplo.jsx    Es solo para observar que react mira las key de los input no importa que se rendericen en diferente orden
 //todo  2       ==> ejemplo Uncontrolled.jsx  es solo para mirar como son los formularios viejos y que llamar directamente al dom para tener la info que necesitan
+
+//!RECORDAR
+// con el metodo onChage se pude controlar la entrada de una info a un estado creando la funcion que me modifique el estado
+//ejemplo
+
+function app() {
+    const manejarlaentrada = (evento) => { }
+    return <input name="alumno" type='text' onChange={manejarlaentrada}></input>
+}
