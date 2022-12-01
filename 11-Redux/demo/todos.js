@@ -11,7 +11,7 @@ const initialState = {
 }
 
 const rootReducer = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case ADD_TODO:
       return {
         todos: [...state.todos, action.payload]

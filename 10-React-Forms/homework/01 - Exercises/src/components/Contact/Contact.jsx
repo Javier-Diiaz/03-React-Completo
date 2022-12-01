@@ -46,13 +46,13 @@ export default function Contact() {
         subject: "",
         message: ""
       })
-      // setErrors({
-      //   name: "",
-      //   email: "",
-      //   phone: "",
-      //   subject: "",
-      //   message: ""
-      // })
+      setErrors(validate({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: ""
+      }))
     }
     else {
       alert("Debes corregir los errores")

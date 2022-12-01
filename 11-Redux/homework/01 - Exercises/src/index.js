@@ -3,10 +3,10 @@ const contador = require("./reducer");
 const { incremento, decremento } = require("./actions");
 
 // En esta línea creamos nuestro store. Pasándole como parámetro nuestro Reducer
-var store;
+var store = createStore(contador);
 
 // Obtenemos el elemento con el id `valor`.
-var valor;
+var valor = store;
 
 // Esta función nos va a servir para actualizar nuestro DOM con el valor que tengamos en nuestro Store.
 // En el primer render y cada vez que nos subscribamos al Store.
@@ -14,6 +14,7 @@ var valor;
 function renderContador() {
   // Obtenemos la propiedad 'contador' de nuestro store:
   // Seteamos el número obtenido como texto dentro del elemento con id 'valor':
+  store.contador()
 }
 
 // Ejecutamos la función 'renderContador':
