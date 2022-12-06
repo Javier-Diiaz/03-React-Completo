@@ -1,6 +1,6 @@
 const { createStore } = require("redux");
 const contador = require("./reducer");
-const { incremento, decremento } = require("./actions");
+const { incremento, decremento, impar } = require("./actions");
 
 // En esta línea creamos nuestro store. Pasándole como parámetro nuestro Reducer
 var store = createStore(contador);
@@ -32,4 +32,8 @@ document.querySelector("#incremento").addEventListener("click", () => {
 
 document.querySelector("#decremento").addEventListener("click", () => {
   store.dispatch(decremento())
+})
+
+document.querySelector('#incrementoImpar').addEventListener("click", () => {
+  store.dispatch(impar())
 })
